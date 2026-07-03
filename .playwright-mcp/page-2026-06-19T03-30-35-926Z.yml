@@ -1,0 +1,247 @@
+- generic [ref=e3]:
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - link "Homepage" [ref=e7] [cursor=pointer]:
+        - /url: https://medium.com/?source=post_page---top_nav_layout_nav-----------------------------------------
+        - img "Medium Logo" [ref=e8]
+      - generic [ref=e11]:
+        - img [ref=e13]
+        - combobox "search" [ref=e15]
+    - button "Get the Medium app" [ref=e17] [cursor=pointer]:
+      - img [ref=e18]
+      - generic [ref=e21]: Get app
+    - link "Write" [ref=e24] [cursor=pointer]:
+      - /url: https://medium.com/m/signin?operation=register&redirect=https%3A%2F%2Fmedium.com%2Fnew-story&source=---top_nav_layout_nav-----------------------new_post_topnav------------------
+      - generic [ref=e25]:
+        - img [ref=e26]
+        - text: Write
+    - generic [ref=e30]:
+      - paragraph [ref=e31]:
+        - button "Sign up" [ref=e33]
+      - paragraph [ref=e35]:
+        - link "Sign in" [ref=e37] [cursor=pointer]:
+          - /url: https://medium.com/m/signin?operation=login&redirect=https%3A%2F%2Fpub.towardsai.net%2Fchoosing-your-agent-harness-an-architectural-comparison-of-claude-managed-agents-langchain-deep-a0762804ec07&source=post_page---top_nav_layout_nav-----------------------global_nav------------------
+    - button "user options menu" [ref=e42] [cursor=pointer]:
+      - img "Unknown user" [ref=e44]
+  - generic [ref=e48]:
+    - link "Towards AI" [ref=e56] [cursor=pointer]:
+      - /url: https://pub.towardsai.net/?source=post_page---publication_nav-98111c9905da-a0762804ec07---------------------------------------
+      - heading "Towards AI" [level=2] [ref=e57]:
+        - generic [ref=e58]: Towards AI
+    - generic:
+      - dialog
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - link "Towards AI":
+                  - /url: https://pub.towardsai.net/?source=post_page---post_publication_sidebar-98111c9905da-a0762804ec07---------------------------------------
+                  - generic:
+                    - img "Towards AI"
+                - paragraph:
+                  - text: "We build Enterprise AI. We teach what we learn. Join 100K+ AI practitioners on Towards AI Academy. Free: 6-day Agentic AI Engineering Email Guide:"
+                  - link "https://email-course.towardsai.net/":
+                    - /url: https://email-course.towardsai.net/
+                - paragraph:
+                  - button "Follow publication"
+    - generic [ref=e59]:
+      - article [ref=e60]:
+        - generic [ref=e65]:
+          - figure "Three glowing pathways representing Anthropic, LangChain, and OpenAI agent frameworks converging at a central AI control plane orb" [ref=e69]:
+            - button "Press enter or click to view image in full size" [ref=e70]:
+              - generic [ref=e71]: Press enter or click to view image in full size
+            - generic [ref=e74]: Three glowing pathways representing Anthropic, LangChain, and OpenAI agent frameworks converging at a central AI control plane orb
+          - generic [ref=e76]:
+            - generic [ref=e77]:
+              - generic [ref=e83] [cursor=pointer]:
+                - img [ref=e84]
+                - paragraph [ref=e86]: Member-only story
+              - 'heading "Choosing Your Agent Harness: An Architectural Comparison of Claude Managed Agents, LangChain Deep Agents, and the OpenAI Agents SDK" [level=1] [ref=e87]'
+            - generic [ref=e88]:
+              - heading "Claude Managed Agents vs. LangChain Deep Agents vs. OpenAI Agents SDK to guide your AI agent harness decision." [level=2] [ref=e89]
+              - generic [ref=e92]:
+                - generic [ref=e93]:
+                  - generic [ref=e94]:
+                    - link "Rick Hightower" [ref=e99] [cursor=pointer]:
+                      - /url: https://medium.com/@richardhightower?source=post_page---byline--a0762804ec07---------------------------------------
+                      - img "Rick Hightower" [ref=e102]
+                    - generic [ref=e106]:
+                      - link "Rick Hightower" [ref=e112] [cursor=pointer]:
+                        - /url: https://medium.com/@richardhightower?source=post_page---byline--a0762804ec07---------------------------------------
+                      - button "Follow" [ref=e113] [cursor=pointer]:
+                        - generic [ref=e115]: Follow
+                  - generic [ref=e118]:
+                    - generic [ref=e119]: 27 min read
+                    - generic [ref=e121]: ·
+                    - generic [ref=e122]: Apr 24, 2026
+                - generic [ref=e123]:
+                  - generic [ref=e125]:
+                    - generic [ref=e127]:
+                      - link "clap" [ref=e130] [cursor=pointer]:
+                        - /url: https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fvote%2Ftowards-artificial-intelligence%2Fa0762804ec07&operation=register&redirect=https%3A%2F%2Fpub.towardsai.net%2Fchoosing-your-agent-harness-an-architectural-comparison-of-claude-managed-agents-langchain-deep-a0762804ec07&user=Rick+Hightower&userId=14ebc6659b6b&source=---header_actions--a0762804ec07---------------------clap_footer------------------
+                        - generic [ref=e133]:
+                          - img "clap"
+                      - paragraph [ref=e138]:
+                        - button "190" [ref=e139] [cursor=pointer]: "190"
+                    - button "responses" [ref=e144] [cursor=pointer]:
+                      - img [ref=e145]
+                      - paragraph [ref=e147]: "1"
+                    - link "Repost" [ref=e153] [cursor=pointer]:
+                      - /url: https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Frepost%2Fp%2Fa0762804ec07&operation=register&redirect=https%3A%2F%2Fpub.towardsai.net%2Fchoosing-your-agent-harness-an-architectural-comparison-of-claude-managed-agents-langchain-deep-a0762804ec07&user=Rick+Hightower&userId=14ebc6659b6b&source=---header_actions--a0762804ec07---------------------repost_header------------------
+                      - generic "Repost" [ref=e154]:
+                        - img [ref=e156]
+                  - generic [ref=e158]:
+                    - link "Add to list bookmark button" [ref=e164] [cursor=pointer]:
+                      - /url: https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fbookmark%2Fp%2Fa0762804ec07&operation=register&redirect=https%3A%2F%2Fpub.towardsai.net%2Fchoosing-your-agent-harness-an-architectural-comparison-of-claude-managed-agents-langchain-deep-a0762804ec07&source=---header_actions--a0762804ec07---------------------bookmark_footer------------------
+                      - img "Add to list bookmark button" [ref=e166]
+                    - link "Listen" [ref=e174] [cursor=pointer]:
+                      - /url: https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2Fplans%3Fdimension%3Dpost_audio_button%26postId%3Da0762804ec07&operation=register&redirect=https%3A%2F%2Fpub.towardsai.net%2Fchoosing-your-agent-harness-an-architectural-comparison-of-claude-managed-agents-langchain-deep-a0762804ec07&source=---header_actions--a0762804ec07---------------------post_audio_button------------------
+                      - button "Listen" [ref=e178]:
+                        - img [ref=e179]
+                    - button "Share Post" [ref=e185] [cursor=pointer]:
+                      - img [ref=e186]
+            - blockquote [ref=e188]:
+              - paragraph [ref=e189]: Discover why the AI agent harness is the next big battlefield in tech — and which framework will give your team the decisive edge.
+            - paragraph [ref=e190]:
+              - text: The AI model is no longer the product.
+              - strong [ref=e191]: The harness is.
+              - text: "As agentic systems move from chat to long-horizon autonomy, the decisive architectural choice becomes the layer that runs the loop between reasoning and execution: sandboxing, tool routing, state, credentials, and multi-agent delegation."
+            - paragraph [ref=e192]:
+              - text: This article compares three competing answers to that problem,
+              - strong [ref=e193]: Claude Managed Agents
+              - text: ", Managed"
+              - strong [ref=e194]: LangChain Deep Agents
+              - text: ", and the"
+              - strong [ref=e195]: OpenAI Agents SDK
+              - text: ", across architecture, security boundaries, economics, and strategic lock-in. The goal is not to crown a winner. It is to help engineering leaders pick the harness that matches their constraints today, and their migration path tomorrow."
+            - heading "Key takeaways" [level=2] [ref=e196]
+            - list [ref=e197]:
+              - listitem [ref=e198]:
+                - strong [ref=e199]: Harness ownership is the real build-vs-buy decision.
+                - text: Managed harnesses maximize speed, but trade away auditability and sovereignty.
+      - generic [ref=e206]:
+        - heading "Create an account to read the full story." [level=2] [ref=e207]:
+          - generic [ref=e208]: Create an account to read the full story.
+        - generic [ref=e210]:
+          - paragraph [ref=e212]:
+            - text: The author made this story available to Medium members only.
+            - text: If you’re new to Medium, create a new account to read this story on us.
+          - generic [ref=e213]:
+            - link "Sign up with Google" [ref=e215] [cursor=pointer]:
+              - /url: //medium.com/m/connect/google?state=google-%7Chttps%3A%2F%2Fpub.towardsai.net%2Fchoosing-your-agent-harness-an-architectural-comparison-of-claude-managed-agents-langchain-deep-a0762804ec07%3Fsource%3D-----a0762804ec07---------------------post_regwall------------------%26skipOnboarding%3D1%7Cregister%7Cremember_me&source=-----a0762804ec07---------------------post_regwall------------------
+              - generic [ref=e216]:
+                - img [ref=e217]
+                - generic [ref=e224]: Sign up with Google
+            - link "Sign up with Facebook" [ref=e228] [cursor=pointer]:
+              - /url: //medium.com/m/connect/facebook?state=facebook-%7Chttps%3A%2F%2Fpub.towardsai.net%2Fchoosing-your-agent-harness-an-architectural-comparison-of-claude-managed-agents-langchain-deep-a0762804ec07%3Fsource%3D-----a0762804ec07---------------------post_regwall------------------%26skipOnboarding%3D1%7Cregister%7Cremember_me&source=-----a0762804ec07---------------------post_regwall------------------
+              - generic [ref=e229]:
+                - img [ref=e230]
+                - generic [ref=e235]: Sign up with Facebook
+            - button "Sign up with email" [ref=e239]:
+              - generic [ref=e240]:
+                - img [ref=e241]
+                - generic [ref=e246]: Sign up with email
+          - text: Already have an account?
+          - link "Sign in" [ref=e249] [cursor=pointer]:
+            - /url: https://medium.com/m/signin?operation=login&redirect=https%3A%2F%2Fpub.towardsai.net%2Fchoosing-your-agent-harness-an-architectural-comparison-of-claude-managed-agents-langchain-deep-a0762804ec07&source=-----a0762804ec07---------------------post_regwall------------------
+    - contentinfo [ref=e250]:
+      - generic [ref=e254]:
+        - generic [ref=e255]:
+          - generic [ref=e258]:
+            - link "clap" [ref=e261] [cursor=pointer]:
+              - /url: https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fvote%2Ftowards-artificial-intelligence%2Fa0762804ec07&operation=register&redirect=https%3A%2F%2Fpub.towardsai.net%2Fchoosing-your-agent-harness-an-architectural-comparison-of-claude-managed-agents-langchain-deep-a0762804ec07&user=Rick+Hightower&userId=14ebc6659b6b&source=---footer_actions--a0762804ec07---------------------clap_footer------------------
+              - generic [ref=e264]:
+                - img "clap"
+            - paragraph [ref=e269]:
+              - button "190" [ref=e270] [cursor=pointer]
+          - button "responses" [ref=e275] [cursor=pointer]:
+            - img [ref=e276]
+            - paragraph [ref=e278]: "1"
+          - link "Repost" [ref=e284] [cursor=pointer]:
+            - /url: https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Frepost%2Fp%2Fa0762804ec07&operation=register&redirect=https%3A%2F%2Fpub.towardsai.net%2Fchoosing-your-agent-harness-an-architectural-comparison-of-claude-managed-agents-langchain-deep-a0762804ec07&user=Rick+Hightower&userId=14ebc6659b6b&source=---footer_actions--a0762804ec07---------------------repost_footer------------------
+            - generic "Repost" [ref=e285]:
+              - img [ref=e287]
+        - generic [ref=e289]:
+          - link "Add to list bookmark button" [ref=e296] [cursor=pointer]:
+            - /url: https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fbookmark%2Fp%2Fa0762804ec07&operation=register&redirect=https%3A%2F%2Fpub.towardsai.net%2Fchoosing-your-agent-harness-an-architectural-comparison-of-claude-managed-agents-langchain-deep-a0762804ec07&source=---footer_actions--a0762804ec07---------------------bookmark_footer------------------
+            - img "Add to list bookmark button" [ref=e298]
+          - button "Share Post" [ref=e305] [cursor=pointer]:
+            - img [ref=e306]
+    - generic [ref=e310]:
+      - generic [ref=e312]:
+        - link "Towards AI" [ref=e315] [cursor=pointer]:
+          - /url: https://pub.towardsai.net/?source=post_page---post_publication_info--a0762804ec07---------------------------------------
+          - img "Towards AI" [ref=e317]
+        - generic [ref=e320]:
+          - link "Published in Towards AI" [ref=e321] [cursor=pointer]:
+            - /url: https://pub.towardsai.net/?source=post_page---post_publication_info--a0762804ec07---------------------------------------
+            - heading "Published in Towards AI" [level=2] [ref=e322]:
+              - generic [ref=e323]: Published in Towards AI
+          - generic [ref=e324]:
+            - link "143K followers" [ref=e327] [cursor=pointer]:
+              - /url: /followers?source=post_page---post_publication_info--a0762804ec07---------------------------------------
+            - generic [ref=e328]:
+              - generic [ref=e329]: ·
+              - link "Last published 3 hours ago" [ref=e330] [cursor=pointer]:
+                - /url: /the-10-ai-concepts-that-explain-everything-else-655d302f345d?source=post_page---post_publication_info--a0762804ec07---------------------------------------
+          - paragraph [ref=e332]:
+            - text: "We build Enterprise AI. We teach what we learn. Join 100K+ AI practitioners on Towards AI Academy. Free: 6-day Agentic AI Engineering Email Guide:"
+            - link "https://email-course.towardsai.net/" [ref=e333] [cursor=pointer]:
+              - /url: https://email-course.towardsai.net/
+        - button "Follow" [ref=e336] [cursor=pointer]:
+          - generic [ref=e338]: Follow
+      - generic [ref=e339]:
+        - link "Rick Hightower" [ref=e342] [cursor=pointer]:
+          - /url: https://medium.com/@richardhightower?source=post_page---post_author_info--a0762804ec07---------------------------------------
+          - img "Rick Hightower" [ref=e344]
+        - generic [ref=e347]:
+          - link "Written by Rick Hightower" [ref=e348] [cursor=pointer]:
+            - /url: https://medium.com/@richardhightower?source=post_page---post_author_info--a0762804ec07---------------------------------------
+            - heading "Written by Rick Hightower" [level=2] [ref=e349]:
+              - generic [ref=e350]: Written by Rick Hightower
+          - generic [ref=e351]:
+            - link "4K followers" [ref=e354] [cursor=pointer]:
+              - /url: https://medium.com/@richardhightower/followers?source=post_page---post_author_info--a0762804ec07---------------------------------------
+            - generic [ref=e355]:
+              - generic [ref=e356]: ·
+              - link "78 following" [ref=e357] [cursor=pointer]:
+                - /url: https://medium.com/@richardhightower/following?source=post_page---post_author_info--a0762804ec07---------------------------------------
+          - paragraph [ref=e359]: Anthropic Claude Certified Architect I AI Harness Engineering, ex-Apple, Capital 1, NFL | Helps CTOs turn prototype agents into reliable, long-running systems
+        - button "Follow" [ref=e362] [cursor=pointer]:
+          - generic [ref=e364]: Follow
+    - generic [ref=e426]:
+      - link "Help" [ref=e428] [cursor=pointer]:
+        - /url: https://help.medium.com/hc/en-us?source=post_page-----a0762804ec07---------------------------------------
+        - paragraph [ref=e429]: Help
+      - link "Status" [ref=e431] [cursor=pointer]:
+        - /url: https://status.medium.com/?source=post_page-----a0762804ec07---------------------------------------
+        - paragraph [ref=e432]: Status
+      - link "About" [ref=e434] [cursor=pointer]:
+        - /url: https://medium.com/about?autoplay=1&source=post_page-----a0762804ec07---------------------------------------
+        - paragraph [ref=e435]: About
+      - link "Careers" [ref=e437] [cursor=pointer]:
+        - /url: https://medium.com/jobs-at-medium/work-at-medium-959d1a85284e?source=post_page-----a0762804ec07---------------------------------------
+        - paragraph [ref=e438]: Careers
+      - link "Press" [ref=e440] [cursor=pointer]:
+        - /url: mailto:pressinquiries@medium.com
+        - paragraph [ref=e441]: Press
+      - link "Blog" [ref=e443] [cursor=pointer]:
+        - /url: https://blog.medium.com/?source=post_page-----a0762804ec07---------------------------------------
+        - paragraph [ref=e444]: Blog
+      - link "Store" [ref=e446] [cursor=pointer]:
+        - /url: https://medium.com/store
+        - paragraph [ref=e447]: Store
+      - link "Privacy" [ref=e449] [cursor=pointer]:
+        - /url: https://policy.medium.com/medium-privacy-policy-f03bf92035c9?source=post_page-----a0762804ec07---------------------------------------
+        - paragraph [ref=e450]: Privacy
+      - link "Rules" [ref=e452] [cursor=pointer]:
+        - /url: https://policy.medium.com/medium-rules-30e5502c4eb4?source=post_page-----a0762804ec07---------------------------------------
+        - paragraph [ref=e453]: Rules
+      - link "Terms" [ref=e455] [cursor=pointer]:
+        - /url: https://policy.medium.com/medium-terms-of-service-9db0094a1e0f?source=post_page-----a0762804ec07---------------------------------------
+        - paragraph [ref=e456]: Terms
+      - link "Text to speech" [ref=e458] [cursor=pointer]:
+        - /url: https://speechify.com/medium?source=post_page-----a0762804ec07---------------------------------------
+        - paragraph [ref=e459]: Text to speech

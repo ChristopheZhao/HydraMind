@@ -1,0 +1,36 @@
+{
+  "objective": "撰写一篇约 2 万字的中文技术博客：《Multi-agent 生产级系统构建：思考与实践》。文章面向具备工程经验的后端/平台架构师读者，从生产可运维角度系统讨论多智能体系统的边界、控制平面、Gating/Verifier、Repair Loop、可观测性与记忆等议题，并结合 HydraMind 框架的实现取舍给出具体案例与权衡分析。\n\n硬性产物约定（必须严格满足，否则会被框架 verifier 自动判为不通过）：\n1) 最终 markdown 文件必须通过 artifact.write_text 写到相对路径 'blog/mas-production-blog.md'（位于 artifact_root 下）。不要使用其它文件名，不要平铺到 artifact_root 根目录。\n2) 必须调用 image.generate 至少 2 次生成图片，并把图片保存到 artifact_root 下的 assets/ 子目录（例如 'assets/arch.png'、'assets/runtime.png'）。然后在 markdown 中以 '![中文图注](../assets/xxx.png)' 形式引用，路径必须从 blog/ 目录解析到 artifact_root/assets/ 下的真实 PNG 文件。\n3) 至少调用 search.web 5 次获取真实来源。每个核心正文章节都必须在讨论具体架构事实、外部系统、工具能力、生产风险或行业实践的同一段内直接给出 http(s) URL；不要只把 URL 堆在最后的“## 参考文献”章节。最后的“## 参考文献”章节仍需汇总至少 5 条具体 URL。\n4) 为了通过 semantic.source_grounding，以下章节至少各有 1 个贴近论点的 inline URL：'## 多智能体生产级系统的核心挑战'、'## HydraMind 架构总览'、'## Harness 与 Provider 抽象'、'## 控制平面与运行时会话'、'## Gating、Verifier 与 Repair Loop'、'## 可观测性与记忆'。引用应放在支撑的句子或段落内，不要只放在章节末尾。\n5) markdown 必须包含以下 8 个二级标题，字符完全一致，按此顺序：\n   ## 引言\n   ## 多智能体生产级系统的核心挑战\n   ## HydraMind 架构总览\n   ## Harness 与 Provider 抽象\n   ## 控制平面与运行时会话\n   ## Gating、Verifier 与 Repair Loop\n   ## 可观测性与记忆\n   ## 参考文献\n6) 全文使用简体中文，长度 ≥ 18000 个 Unicode 字符。",
+  "available_tools": [
+    "search.web",
+    "image.generate",
+    "artifact.write_text",
+    "artifact.read_text",
+    "artifact.exists",
+    "artifact.list"
+  ],
+  "required_tools": [
+    "search.web",
+    "image.generate"
+  ],
+  "expected_artifacts": [
+    "blog/mas-production-blog.md"
+  ],
+  "constraints": [
+    "全文使用简体中文",
+    "最终 markdown 文件路径必须是 'blog/mas-production-blog.md'（artifact_root 下子目录 blog/ 内的 mas-production-blog.md），不允许其它任何文件名或路径",
+    "必须调用 image.generate 至少 2 次，生成的图片保存到 artifact_root/assets/ 下；markdown 引用图片的相对路径必须从 blog/ 目录解析到 ../assets/xxx.png 这样的形式",
+    "必须调用 search.web 至少 5 次，正文与最末『## 参考文献』章节都要保留至少 5 条具体 URL",
+    "每个核心正文章节都必须有贴近论点的 inline URL；不要只在『## 参考文献』章节集中列 URL",
+    "引用 URL 必须放在支撑的句子或同一段附近，尤其是架构事实、外部系统、工具能力、生产风险、行业实践相关论断",
+    "8 个二级标题必须严格使用以下字符串：'## 引言'、'## 多智能体生产级系统的核心挑战'、'## HydraMind 架构总览'、'## Harness 与 Provider 抽象'、'## 控制平面与运行时会话'、'## Gating、Verifier 与 Repair Loop'、'## 可观测性与记忆'、'## 参考文献'",
+    "不允许出现明显的占位文字（如 TODO、待补充、TBD），也不要把章节标题写成『一、引言』『二、…』这种带序号的形式"
+  ],
+  "success_criteria": [
+    "blog/mas-production-blog.md 在 artifact_root 下存在并可读",
+    "正文长度 ≥ 18000 个 Unicode 字符",
+    "包含上述 8 个二级标题（字符严格匹配）",
+    "至少 5 个 http(s) URL，且核心正文段落中存在贴近论点的 inline citation",
+    "至少 2 个 ![](../assets/xxx.png) 形式的图片引用，对应图片文件真实存在于 artifact_root/assets/ 下",
+    "semantic.source_grounding 必须通过：引用不能只出现在最终参考文献列表中"
+  ]
+}

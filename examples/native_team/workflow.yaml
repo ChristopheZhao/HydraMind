@@ -1,0 +1,72 @@
+name: native_team_brief
+version: "1"
+
+# A medium-complexity native-team MAS example (DoD-2 capstone).
+#
+# ONE workflow node (`collaborate`) declares a native MAS team via
+# `config.mas_team`. The loader carries `config.mas_team` verbatim;
+# `resolve_node_execution_mode` routes a `mas_team` node to TEAM execution; the
+# kernel scheduler then drives the members as scheduled agent turns.
+#
+# Topology: PIPELINE (researcher -> analyst -> writer). Each member reads the
+# accumulated output of its predecessors (the kernel PipelineStrategy threads a
+# peer's prior turn into the next member's context, speaker-attributed). The
+# WRITER is the last member and produces the final deliverable AND writes it to
+# the file artifact `brief.md` via an `artifact.write_text` tool call. The
+# tool-drain executes that write under `--artifact-root`.
+#
+# Verification: `config.task_contract.expected_artifacts` declares `brief.md`;
+# the workflow runtime wires the same safety/boundary verifier stack the goal
+# path uses, so `TaskContractVerifierRunner` (artifact existence + path safety)
+# and `ArtifactContainmentVerifierRunner` (artifact-root containment) verify the
+# produced artifact. The semantic verifier no-ops (no semantic_rubric) so the
+# offline mock run stays deterministic.
+nodes:
+  - key: collaborate
+    role: coordinator
+    description: >-
+      Run a research -> analysis -> writing pipeline that produces a verified
+      one-page brief artifact.
+    # Tools available to this node's members. `artifact.write_text` lets the
+    # writer persist the deliverable under the artifact root.
+    tools:
+      - artifact.write_text
+    config:
+      # The native MAS team. `mas_team` is the first-class TeamSpec the loader
+      # carries through to NativeTeamExecutor._team_spec_from_config.
+      mas_team:
+        id: brief-team
+        # PIPELINE topology: members act in declared order; member N reads the
+        # output of members 1..N-1.
+        protocol:
+          mode: team
+          topology: pipeline
+          aggregation: collect
+        # The team-level tool allowlist; each member further narrows it.
+        tools:
+          - artifact.write_text
+        members:
+          - id: researcher
+            role: researcher
+            instructions: >-
+              You are the researcher. Gather the key facts and angles for the
+              requested brief and hand a concise findings list to the analyst.
+          - id: analyst
+            role: analyst
+            instructions: >-
+              You are the analyst. Read the researcher's findings and distill
+              them into 3 prioritized insights for the writer.
+          - id: writer
+            role: writer
+            # Only the writer may write the artifact.
+            tools:
+              - artifact.write_text
+            instructions: >-
+              You are the writer. Read the analyst's insights and write the
+              final one-page brief. You MUST persist the brief by calling
+              artifact.write_text with path 'brief.md'.
+      # Delivery contract verified by the runtime's verifier stack.
+      task_contract:
+        objective: Produce a verified one-page brief artifact.
+        expected_artifacts:
+          - brief.md

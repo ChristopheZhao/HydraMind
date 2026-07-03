@@ -1,0 +1,112 @@
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[project]
+name = "hydramind"
+version = "0.1.0a0"
+description = "Native multi-agent framework with agent-queue decoupling, gating as a first-class contract, and a split between model/provider access and a replaceable execution harness."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [
+    { name = "zhaojj", email = "398453241@qq.com" },
+]
+keywords = ["multi-agent", "mas", "agent-framework", "claude", "harness", "orchestration"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+]
+dependencies = [
+    "pydantic>=2.6",
+    "pyyaml>=6.0",
+    "structlog>=24.1",
+    "typing-extensions>=4.10",
+]
+
+[project.optional-dependencies]
+claude = [
+    "anthropic>=0.39",
+    "claude-agent-sdk>=0.1; python_version >= '3.11'",
+]
+celery = [
+    "celery>=5.4",
+    "redis>=5.0",
+]
+redis = [
+    "redis>=5.0",
+]
+otel = [
+    "opentelemetry-api>=1.25",
+    "opentelemetry-sdk>=1.25",
+]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "pytest-cov>=5.0",
+    "ruff>=0.4",
+    "mypy>=1.10",
+    "hatch>=1.12",
+]
+
+[project.urls]
+Homepage = "https://github.com/ChristopheZhao/HydraMind"
+Documentation = "https://github.com/ChristopheZhao/HydraMind/tree/main/docs"
+Repository = "https://github.com/ChristopheZhao/HydraMind"
+Issues = "https://github.com/ChristopheZhao/HydraMind/issues"
+
+[project.scripts]
+hydramind = "hydramind.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/hydramind"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/", "README.md", "LICENSE", "pyproject.toml"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "N", "RUF"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+disallow_untyped_defs = true
+no_implicit_optional = true
+files = ["src/hydramind"]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+addopts = "-ra --strict-markers --strict-config"
+testpaths = ["tests"]
+asyncio_mode = "auto"
+markers = [
+    "integration: integration tests (may need network)",
+    "e2e: end-to-end tests (slow, needs reference impls)",
+]
+
+[tool.coverage.run]
+source = ["src/hydramind"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false
+exclude_lines = [
+    "pragma: no cover",
+    "raise NotImplementedError",
+    "if TYPE_CHECKING:",
+    "if __name__ == .__main__.:",
+]

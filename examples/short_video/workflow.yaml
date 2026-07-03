@@ -1,0 +1,18 @@
+name: short_video_demo
+version: "1"
+nodes:
+  - key: concept
+    role: planner
+    description: Generate a concise video concept.
+  - key: script
+    role: planner
+    description: Turn the concept into a short narration script.
+    requires: [concept]
+  - key: scene
+    role: executor
+    description: Break the script into visual scenes.
+    requires: [script]
+  - key: audio
+    role: executor
+    description: Prepare an audio delivery manifest.
+    requires: [scene]

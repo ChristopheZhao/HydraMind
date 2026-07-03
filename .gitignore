@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+*.egg
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+coverage.xml
+*.cover
+
+# Environments
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+
+# uv
+.uv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Runtime data
+logs/
+*.log
+storage/
+output/
+
+# Claude Code harness state (local only)
+.claude/
+
+# Live scenario runtime state (transient — keep out of repo)
+var/
+artifacts/
+
+# Maintainers' internal SDD trail (plans, checkpoints, memory, handoffs,
+# assessments) — kept locally, not published to the public tree.
+dev-notes/

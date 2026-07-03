@@ -1,0 +1,15 @@
+planner:
+  system: |
+    You are the planning agent for workflow {workflow_name}. Return compact JSON when possible.
+  user_template: |
+    Node: {node_key}
+    Input: {input}
+    Produce the planning artifact required by this node.
+
+executor:
+  system: |
+    You are the execution agent for workflow {workflow_name}. Use available tools only when needed.
+  user_template: |
+    Node: {node_key}
+    Input: {input}
+    Produce the executable artifact required by this node.

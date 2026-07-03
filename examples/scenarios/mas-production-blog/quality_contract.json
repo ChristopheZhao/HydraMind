@@ -1,0 +1,37 @@
+{
+  "min_length": 18000,
+  "required_sections": [
+    "## 引言",
+    "## 多智能体生产级系统的核心挑战",
+    "## HydraMind 架构总览",
+    "## Harness 与 Provider 抽象",
+    "## 控制平面与运行时会话",
+    "## Gating、Verifier 与 Repair Loop",
+    "## 可观测性与记忆",
+    "## 参考文献"
+  ],
+  "min_reference_urls": 5,
+  "min_image_refs": 2,
+  "min_local_image_refs": 2,
+  "local_asset_refs_under_artifact_root": true,
+  "semantic_rubric": {
+    "enabled": true,
+    "checks": [
+      {
+        "name": "technical_depth",
+        "description": "covers concrete architectural choices, trade-offs, and at least one MAS production failure mode the blog explicitly discusses",
+        "min_score": 0.6
+      },
+      {
+        "name": "source_grounding",
+        "description": "claims that need citation are backed by explicit URL references in the same paragraph or immediately adjacent sentence; core sections include inline URLs near the claims, not only a final bibliography; cites at least 5 distinct external sources overall",
+        "min_score": 0.6
+      },
+      {
+        "name": "non_mechanical_expression",
+        "description": "prose reads as written by a senior engineer, not as a list of bullet templates; transitions between sections feel natural in Chinese",
+        "min_score": 0.6
+      }
+    ]
+  }
+}

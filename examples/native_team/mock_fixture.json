@@ -1,0 +1,75 @@
+{
+  "708bfe5cf8596dc3a6f0b72a5112944defe687b8887a4ec24dc534325b468b5d": {
+    "content": "Insights: (1) topology is interpreted policy, (2) the team produces the artifact, (3) determinism via record/replay.",
+    "model_id": "mock-balanced",
+    "raw": {},
+    "reasoning_content": null,
+    "stop_reason": "end_turn",
+    "subagent_id": null,
+    "subagent_summary": null,
+    "tool_calls": [],
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "input_tokens": 0,
+      "output_tokens": 0
+    }
+  },
+  "94444902c5d46d0f6994081ce90d66386757b3211bcfc1fd99da9f73dbc66062": {
+    "content": "mock-echo: go",
+    "model_id": "mock-balanced",
+    "raw": {},
+    "reasoning_content": null,
+    "stop_reason": "end_turn",
+    "subagent_id": null,
+    "subagent_summary": null,
+    "tool_calls": [],
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "input_tokens": 2,
+      "output_tokens": 2
+    }
+  },
+  "dc6d9f6d441dd09eb8e25c0350cb3b726b28eced9b8a4f332c7669f6e1e7d979": {
+    "content": "Findings: native teams run as scheduled agent turns; PIPELINE threads each member's output to the next; artifacts are produced by member tool calls.",
+    "model_id": "mock-balanced",
+    "raw": {},
+    "reasoning_content": null,
+    "stop_reason": "end_turn",
+    "subagent_id": null,
+    "subagent_summary": null,
+    "tool_calls": [],
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "input_tokens": 0,
+      "output_tokens": 0
+    }
+  },
+  "de8b845bfae91ca4aa03624797e15a58038891d181f9ed3ef5c861e41fbdcd23": {
+    "content": "Writing the brief to brief.md.",
+    "model_id": "mock-balanced",
+    "raw": {},
+    "reasoning_content": null,
+    "stop_reason": "tool_use",
+    "subagent_id": null,
+    "subagent_summary": null,
+    "tool_calls": [
+      {
+        "arguments": {
+          "content": "# One-Page Brief: Native-Team MAS\n\n## Summary\nA native-team multi-agent pipeline (researcher -> analyst -> writer) produced\nthis brief offline. Each member read its predecessor's output via the kernel\nscheduler; the writer persisted the deliverable through artifact.write_text.\n\n## Key Insights\n1. Topology is interpreted policy: PIPELINE makes member N read member N-1.\n2. The artifact is produced by the TEAM (the writer's tool call), not the test.\n3. Determinism comes from an input-keyed MockProvider record/replay fixture.\n\n## Recommendation\nUse native teams for medium-complexity tasks that need verified file artifacts\ndelivered reproducibly.\n",
+          "path": "brief.md"
+        },
+        "id": "call-write-brief",
+        "name": "artifact.write_text"
+      }
+    ],
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "input_tokens": 0,
+      "output_tokens": 0
+    }
+  }
+}

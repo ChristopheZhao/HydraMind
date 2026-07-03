@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/ChristopheZhao/HydraMind/security/advisories/new
+    about: Report security issues privately — do not open a public issue.
+  - name: Architecture & design docs
+    url: https://github.com/ChristopheZhao/HydraMind/tree/main/docs/architecture
+    about: Read the four-layer harness design and ADRs before filing design issues.

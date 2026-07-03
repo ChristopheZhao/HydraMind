@@ -1,0 +1,67 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    name: lint + type + test (py${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Set up Python ${{ matrix.python-version }}
+        run: uv python install ${{ matrix.python-version }}
+
+      - name: Sync dependencies (dev + optional backends)
+        run: uv sync --extra dev --extra celery --extra otel
+
+      - name: Ruff (lint)
+        run: uv run ruff check src tests
+
+      - name: Mypy (strict type check)
+        run: uv run mypy src
+
+      - name: Pytest with coverage
+        run: uv run pytest --cov=hydramind --cov-report=term-missing --cov-report=xml
+
+      - name: Upload coverage artifact
+        if: matrix.python-version == '3.12'
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-xml
+          path: coverage.xml
+          if-no-files-found: ignore
+
+  boundaries:
+    name: architecture invariants
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Sync dependencies
+        run: uv sync --extra dev
+
+      - name: Enforce layer boundaries (no vendor SDK leak, SoT ownership, externalized prompts)
+        run: uv run pytest tests/contract/test_architecture_invariants.py -v
